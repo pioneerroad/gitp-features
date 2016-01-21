@@ -119,7 +119,7 @@ function content_type__resource_field_default_field_instances() {
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_plain',
         'weight' => 2,
       ),
       'full' => array(
@@ -185,7 +185,7 @@ function content_type__resource_field_default_field_instances() {
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
-        'type' => 'file_url_plain',
+        'type' => 'file_default',
         'weight' => 3,
       ),
       'full' => array(
@@ -235,10 +235,13 @@ function content_type__resource_field_default_field_instances() {
 <i>Adding summary text (using the \'Edit Summary\' control about the text field) is highly recommended.</i>',
     'display' => array(
       'carousel_slide' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 1,
       ),
       'content_summary_box' => array(
         'label' => 'hidden',
@@ -279,18 +282,10 @@ function content_type__resource_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'search_result' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -337,7 +332,7 @@ By selecting key action areas, you will help users find all the content that rel
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -378,22 +373,10 @@ By selecting key action areas, you will help users find all the content that rel
         'type' => 'entityreference_label',
         'weight' => 3,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 3,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -435,7 +418,7 @@ By selecting key action areas, you will help users find all the content that rel
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -476,22 +459,10 @@ By selecting key action areas, you will help users find all the content that rel
         'type' => 'entityreference_label',
         'weight' => 2,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -530,9 +501,13 @@ By selecting key action areas, you will help users find all the content that rel
 Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
     'display' => array(
       'carousel_slide' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
       'content_summary_box' => array(
@@ -585,24 +560,10 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'type' => 'image',
         'weight' => 6,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 6,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -654,7 +615,7 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -695,22 +656,10 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'type' => 'entityreference_label',
         'weight' => 5,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 5,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'teaser' => array(
@@ -752,7 +701,7 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -787,18 +736,10 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'type' => 'text_default',
         'weight' => 8,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -838,7 +779,7 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -902,32 +843,10 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'type' => 'date_default',
         'weight' => 9,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
-        'weight' => 9,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 9,
       ),
       'teaser' => array(
@@ -946,7 +865,6 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
-      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -959,7 +877,7 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'label_position' => 'above',
         'no_fieldset' => 0,
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-50:+3',
       ),
       'type' => 'date_select',
       'weight' => 5,
@@ -977,7 +895,7 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -1030,26 +948,13 @@ Recommended to provide a thumbnail that is <i>portrait</i> orientation.',
         'type' => 'field_collection_view',
         'weight' => 7,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
           'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 7,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
+          'description' => 1,
           'edit' => 'Edit',
           'view_mode' => 'full',
         ),
@@ -1093,7 +998,7 @@ Please check to see if a similar keyword already exists before creating a new on
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -1134,22 +1039,10 @@ Please check to see if a similar keyword already exists before creating a new on
         'type' => 'entityreference_label',
         'weight' => 1,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -1196,7 +1089,7 @@ Please check to see if a similar keyword already exists before creating a new on
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -1237,22 +1130,10 @@ Please check to see if a similar keyword already exists before creating a new on
         'type' => 'entityreference_label',
         'weight' => 4,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'teaser' => array(
@@ -1298,7 +1179,7 @@ Please check to see if a similar keyword already exists before creating a new on
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -1332,18 +1213,10 @@ Please check to see if a similar keyword already exists before creating a new on
         'type' => 'list_default',
         'weight' => 11,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 11,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -1390,7 +1263,7 @@ Please check to see if a similar keyword already exists before creating a new on
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'content_summary_box' => array(
         'label' => 'above',
@@ -1424,18 +1297,10 @@ Please check to see if a similar keyword already exists before creating a new on
         'type' => 'og_list_default',
         'weight' => 10,
       ),
-      'search_index' => array(
+      'resource_field_display' => array(
         'label' => 'above',
-        'module' => 'og_ui',
         'settings' => array(),
-        'type' => 'og_list_default',
-        'weight' => 10,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'module' => 'og_ui',
-        'settings' => array(),
-        'type' => 'og_list_default',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'teaser' => array(

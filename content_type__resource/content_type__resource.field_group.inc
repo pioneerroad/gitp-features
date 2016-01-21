@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function content_type__resource_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -42,7 +42,7 @@ function content_type__resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_about|node|resources|full'] = $field_group;
+  $field_groups['group_about|node|resources|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -72,7 +72,7 @@ function content_type__resource_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_content_control|node|resources|form'] = $field_group;
+  $field_groups['group_content_control|node|resources|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -106,7 +106,7 @@ function content_type__resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_content|node|resources|full'] = $field_group;
+  $field_groups['group_content|node|resources|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -133,7 +133,7 @@ function content_type__resource_field_group_info() {
       ),
     ),
   );
-  $export['group_metadata|node|resources|form'] = $field_group;
+  $field_groups['group_metadata|node|resources|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -163,7 +163,7 @@ function content_type__resource_field_group_info() {
       ),
     ),
   );
-  $export['group_relationships|node|resources|form'] = $field_group;
+  $field_groups['group_relationships|node|resources|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -198,7 +198,7 @@ function content_type__resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_relationships|node|resources|full'] = $field_group;
+  $field_groups['group_relationships|node|resources|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -227,7 +227,16 @@ function content_type__resource_field_group_info() {
       ),
     ),
   );
-  $export['group_resource_information|node|resources|form'] = $field_group;
+  $field_groups['group_resource_information|node|resources|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('About this resource');
+  t('Content');
+  t('Group Settings');
+  t('Metadata');
+  t('Relationships');
+  t('Resource Information');
+
+  return $field_groups;
 }
