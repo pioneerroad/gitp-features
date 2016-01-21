@@ -1,0 +1,16 @@
+name = Text Formats
+description = Text formats feature
+core = 7.x
+package = Features -- Global
+version = 7.x-1.0
+dependencies[] = ckeditor
+dependencies[] = features
+dependencies[] = filter
+features[ckeditor_profile][] = CKEditor Global Profile
+features[ckeditor_profile][] = Full
+features[ckeditor_profile][] = Simple
+features[features_api][] = api:2
+features[filter][] = filtered_html
+features[filter][] = full_html
+features[filter][] = plain_text
+features[filter][] = raw_html_no_filters_

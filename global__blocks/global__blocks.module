@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Features -- Global Blocks feature.
+ */
+
+include_once 'global__blocks.features.inc';

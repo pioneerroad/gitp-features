@@ -1,0 +1,9 @@
+name = Taxonomy -- Implementation Status
+description = Defines the Implementation Status Taxonomy Bundle
+core = 7.x
+package = Features -- Taxonomy
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = implementation_status

@@ -1,0 +1,14 @@
+name = Image Styles
+description = Image Styles defined
+core = 7.x
+package = Features -- Global
+version = 7.x-1.0
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = carousel_slide__thumbnail
+features[image][] = carousel_slide_image
+features[image][] = landscape_photo__fixed_ratio__lg
+features[image][] = landscape_photo__fixed_ratio__medium
+features[image][] = landscape_photo__fixed_ratio__sm
+features[image][] = square_photo__lg
+features[image][] = square_photo__sm

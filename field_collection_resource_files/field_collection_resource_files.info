@@ -1,0 +1,15 @@
+name = Field Collection -- Resource Files
+description = Field Collection for a resource file upload
+core = 7.x
+package = Features -- Field Collection
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = file
+dependencies[] = link
+dependencies[] = list
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = field_fc_resource_file_title
+features[field_base][] = field_fc_resource_language
+features[field_base][] = field_fc_resource_link
+features[field_base][] = field_fc_resource_upload_file
