@@ -1,0 +1,11 @@
+name = RSG Page Block
+description = Place Member Block (Views)
+core = 7.x
+package = Page Block
+version = 7.x-1.0
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = views
+features[context][] = page_blocks__rsg
+features[ctools][] = context:context:3
+features[features_api][] = api:2

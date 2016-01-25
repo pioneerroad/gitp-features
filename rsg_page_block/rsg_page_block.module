@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RSG Page Block feature.
+ */
+
+include_once 'rsg_page_block.features.inc';
