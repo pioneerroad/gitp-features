@@ -8,7 +8,68 @@
  * Implements hook_field_group_info().
  */
 function taxonomy_country_field_group_info() {
-  $export = array();
+  $field_groups = array();
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_country_contacts|taxonomy_term|country|form';
+  $field_group->group_name = 'group_country_contacts';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'country';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_country_information';
+  $field_group->data = array(
+    'label' => 'Contacts',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_country_crvs_focal_point',
+      1 => 'field_country_rsg_member',
+      2 => 'field_country_website',
+    ),
+    'format_type' => 'tabs',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-country-contacts field-group-tabs',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_country_contacts|taxonomy_term|country|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_country_contacts|taxonomy_term|country|full';
+  $field_group->group_name = 'group_country_contacts';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'country';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Contacts',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_country_crvs_focal_point',
+      1 => 'field_country_rsg_member',
+      2 => 'field_country_website',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-country-contacts field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_country_contacts|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -25,6 +86,7 @@ function taxonomy_country_field_group_info() {
     'children' => array(
       0 => 'group_country_statistics',
       1 => 'group_implementation_status',
+      2 => 'group_country_contacts',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
@@ -34,7 +96,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_country_information|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_country_information|taxonomy_term|country|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -47,7 +109,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = 'group_country_information';
   $field_group->data = array(
     'label' => 'Country Statistics',
-    'weight' => '3',
+    'weight' => '17',
     'children' => array(
       0 => 'field_country_pop_growth_rate',
       1 => 'field_country_crude_birth_rate',
@@ -66,7 +128,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_country_statistics|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_country_statistics|taxonomy_term|country|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -97,7 +159,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_goal_1|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_goal_1|taxonomy_term|country|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -132,7 +194,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_goal_1|taxonomy_term|country|full'] = $field_group;
+  $field_groups['group_goal_1|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -160,7 +222,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_goal_2|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_goal_2|taxonomy_term|country|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -192,7 +254,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_goal_2|taxonomy_term|country|full'] = $field_group;
+  $field_groups['group_goal_2|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -226,7 +288,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_goal_3|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_goal_3|taxonomy_term|country|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -264,7 +326,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_goal_3|taxonomy_term|country|full'] = $field_group;
+  $field_groups['group_goal_3|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -277,7 +339,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Goals',
-    'weight' => '15',
+    'weight' => '4',
     'children' => array(
       0 => 'group_goal_1',
       1 => 'group_goal_2',
@@ -298,7 +360,7 @@ function taxonomy_country_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_goals|taxonomy_term|country|full'] = $field_group;
+  $field_groups['group_goals|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -311,7 +373,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = 'group_country_information';
   $field_group->data = array(
     'label' => 'Implementation Status',
-    'weight' => '4',
+    'weight' => '18',
     'children' => array(
       0 => 'field_country_impl_coordination',
       1 => 'field_country_impl_assessment',
@@ -332,7 +394,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_implementation_status|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_implementation_status|taxonomy_term|country|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -345,7 +407,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Implementation Status',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_country_impl_coordination',
       1 => 'field_country_impl_assessment',
@@ -370,7 +432,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_implementation_status|taxonomy_term|country|full'] = $field_group;
+  $field_groups['group_implementation_status|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -383,7 +445,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Country Statistics',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_country_pop_growth_rate',
       1 => 'field_country_crude_birth_rate',
@@ -406,7 +468,7 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_statistics|taxonomy_term|country|full'] = $field_group;
+  $field_groups['group_statistics|taxonomy_term|country|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -433,7 +495,19 @@ function taxonomy_country_field_group_info() {
       ),
     ),
   );
-  $export['group_targets|taxonomy_term|country|form'] = $field_group;
+  $field_groups['group_targets|taxonomy_term|country|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Contacts');
+  t('Country Information');
+  t('Country Statistics');
+  t('Goal 1');
+  t('Goal 2');
+  t('Goal 3');
+  t('Goals');
+  t('Implementation Status');
+  t('National Targets');
+
+  return $field_groups;
 }
