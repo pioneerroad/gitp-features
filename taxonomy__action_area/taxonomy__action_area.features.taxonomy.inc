@@ -15,7 +15,7 @@ function taxonomy__action_area_taxonomy_default_vocabularies() {
       'description' => 'CRVS Decade Action Areas',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -8,
+      'weight' => -5,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

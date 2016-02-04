@@ -53,33 +53,26 @@ function profile__member_profile_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_member_position'.
-  $field_bases['field_member_position'] = array(
+  // Exported field_base: 'field_member_job_title'.
+  $field_bases['field_member_job_title'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_member_position',
+    'field_name' => 'field_member_job_title',
     'indexes' => array(
-      'value' => array(
-        0 => 'value',
+      'format' => array(
+        0 => 'format',
       ),
     ),
     'locked' => 0,
-    'module' => 'list',
+    'module' => 'text',
     'settings' => array(
-      'allowed_values' => array(
-        'minister ' => ' Minister',
-        'policy adviser ' => ' Policy Adviser',
-        'program_manager ' => ' Program Manager',
-        'researcher ' => ' Researcher or Academic',
-        'secretary ' => ' Secretary',
-      ),
-      'allowed_values_function' => '',
+      'max_length' => 255,
       'profile2_private' => 0,
     ),
     'translatable' => 0,
-    'type' => 'list_text',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_member_working_country'.
@@ -99,6 +92,14 @@ function profile__member_profile_field_default_field_bases() {
     'settings' => array(
       'handler' => 'base',
       'handler_settings' => array(
+        'behaviors' => array(
+          'entityqueue' => array(
+            'status' => 0,
+          ),
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
         'sort' => array(
           'type' => 'none',
         ),

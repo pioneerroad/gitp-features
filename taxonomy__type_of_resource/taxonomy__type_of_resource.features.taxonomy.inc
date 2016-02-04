@@ -15,7 +15,7 @@ function taxonomy__type_of_resource_taxonomy_default_vocabularies() {
       'description' => 'This vocabulary allows resources to be classified by \'Type\'. Eg. training manual, meeting document, or publication',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -6,
+      'weight' => -7,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

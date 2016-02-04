@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function profile__member_profile_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -27,7 +27,6 @@ function profile__member_profile_field_group_info() {
       1 => 'field_member_working_country',
       2 => 'field_partner_organisation',
       3 => 'field_member_position',
-      4 => 'field_member_rscg',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -43,7 +42,7 @@ function profile__member_profile_field_group_info() {
       ),
     ),
   );
-  $export['group_relationships|profile2|main|default'] = $field_group;
+  $field_groups['group_relationships|profile2|main|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -56,12 +55,11 @@ function profile__member_profile_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Relationships',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_country',
       1 => 'field_member_working_country',
       2 => 'field_partner_organisation',
-      3 => 'field_member_position',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -77,7 +75,11 @@ function profile__member_profile_field_group_info() {
       ),
     ),
   );
-  $export['group_relationships|profile2|main|full_profile'] = $field_group;
+  $field_groups['group_relationships|profile2|main|full_profile'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Relationships');
+
+  return $field_groups;
 }

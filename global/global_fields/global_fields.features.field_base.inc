@@ -58,7 +58,7 @@ function global_fields_field_default_field_bases() {
   // Exported field_base: 'field_action_area'.
   $field_bases['field_action_area'] = array(
     'active' => 1,
-    'cardinality' => 2,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_action_area',
@@ -73,6 +73,9 @@ function global_fields_field_default_field_bases() {
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
+          'entityqueue' => array(
+            'status' => 0,
+          ),
           'views-select-list' => array(
             'status' => 1,
           ),
@@ -109,6 +112,9 @@ function global_fields_field_default_field_bases() {
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
+          'entityqueue' => array(
+            'status' => 0,
+          ),
           'views-select-list' => array(
             'status' => 1,
           ),
@@ -120,7 +126,7 @@ function global_fields_field_default_field_bases() {
           'country' => 'country',
         ),
       ),
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
       'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,
@@ -227,7 +233,7 @@ function global_fields_field_default_field_bases() {
     'module' => 'image',
     'settings' => array(
       'default_image' => 13,
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,

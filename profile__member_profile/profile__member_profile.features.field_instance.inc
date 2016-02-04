@@ -33,15 +33,16 @@ function profile__member_profile_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'full_profile' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'links' => 0,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
       'thumbnail_profile' => array(
@@ -54,7 +55,7 @@ function profile__member_profile_field_default_field_instances() {
     'entity_type' => 'profile2',
     'field_name' => 'field_country',
     'label' => 'Country of Residence',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -63,7 +64,7 @@ function profile__member_profile_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -92,7 +93,7 @@ The image will be automatically cropped to a square shape throughout the site, s
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'full_profile' => array(
         'label' => 'hidden',
@@ -102,7 +103,7 @@ The image will be automatically cropped to a square shape throughout the site, s
           'image_style' => 'square_photo__lg',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'thumbnail_profile' => array(
         'label' => 'hidden',
@@ -118,10 +119,10 @@ The image will be automatically cropped to a square shape throughout the site, s
     'entity_type' => 'profile2',
     'field_name' => 'field_image',
     'label' => 'Profile Photo',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 11,
+      'default_image' => 386,
       'file_directory' => 'image/profile-photos/[current-user:uid]',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -138,7 +139,7 @@ The image will be automatically cropped to a square shape throughout the site, s
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 7,
+      'weight' => 2,
     ),
   );
 
@@ -165,11 +166,10 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
         'weight' => 1,
       ),
       'full_profile' => array(
-        'label' => 'hidden',
-        'module' => 'text',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'thumbnail_profile' => array(
         'label' => 'above',
@@ -195,7 +195,7 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -225,7 +225,7 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'thumbnail_profile' => array(
         'label' => 'hidden',
@@ -250,57 +250,59 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
-  // Exported field_instance: 'profile2-main-field_member_position'.
-  $field_instances['profile2-main-field_member_position'] = array(
+  // Exported field_instance: 'profile2-main-field_member_job_title'.
+  $field_instances['profile2-main-field_member_job_title'] = array(
     'bundle' => 'main',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please indicate your role or position as it relates to your involvement with CRVS',
+    'description' => '',
     'display' => array(
       'author_profile' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
       'default' => array(
-        'label' => 'inline',
-        'module' => 'list',
+        'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 7,
+        'type' => 'text_default',
+        'weight' => 6,
       ),
       'full_profile' => array(
-        'label' => 'inline',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
-      ),
-      'thumbnail_profile' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
+      ),
+      'thumbnail_profile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'profile2',
-    'field_name' => 'field_member_position',
-    'label' => 'Role/Position',
+    'field_name' => 'field_member_job_title',
+    'label' => 'Job Title/Position',
     'required' => 0,
     'settings' => array(
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 10,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
     ),
   );
 
@@ -324,16 +326,13 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'full_profile' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 3,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'thumbnail_profile' => array(
         'label' => 'above',
@@ -354,7 +353,7 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -378,16 +377,13 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'full_profile' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'thumbnail_profile' => array(
         'label' => 'hidden',
@@ -408,7 +404,7 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 6,
     ),
   );
 
@@ -417,9 +413,9 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
   t('About Me');
   t('Country of Residence');
   t('Full Name');
+  t('Job Title/Position');
   t('Organisation(s)');
   t('Please indicate which organisations you work for or with.');
-  t('Please indicate your role or position as it relates to your involvement with CRVS');
   t('Please provide a profile photo of yourself.
 The image will be automatically cropped to a square shape throughout the site, so please check the image preview below to ensure you are happy with the crop position.');
   t('Please provide countries in which you regularly work.');
@@ -428,7 +424,6 @@ The image will be automatically cropped to a square shape throughout the site, s
   t('Please write a short bio (50 words) or less that describes your experience and interest in CRVS.
 Since it will be displayed throughout the site, please write in the <i>\'third person\'</i>. <i>Eg.</i> Dr Lee has been actively advocating for civil registrations for over 10 years and has been instrumental in formulating over 10 national policies on CRVS.');
   t('Profile Photo');
-  t('Role/Position');
   t('Working Locations');
 
   return $field_instances;

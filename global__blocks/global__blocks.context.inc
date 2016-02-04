@@ -50,6 +50,24 @@ function global__blocks_context_default_contexts() {
           'region' => 'footer_col2',
           'weight' => '-10',
         ),
+        'bean-social-media-icons-block' => array(
+          'module' => 'bean',
+          'delta' => 'social-media-icons-block',
+          'region' => 'footer_col3',
+          'weight' => '-10',
+        ),
+        'views-fb8ec7947ac7078b282730efe6e2890c' => array(
+          'module' => 'views',
+          'delta' => 'fb8ec7947ac7078b282730efe6e2890c',
+          'region' => 'footer_col3',
+          'weight' => '-9',
+        ),
+        'bean-crvs-decade-stamp' => array(
+          'module' => 'bean',
+          'delta' => 'crvs-decade-stamp',
+          'region' => 'footer_col4',
+          'weight' => '-10',
+        ),
       ),
     ),
   );

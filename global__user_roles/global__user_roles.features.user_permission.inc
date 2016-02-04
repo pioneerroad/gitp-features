@@ -33,6 +33,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'access bean overview',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -87,8 +88,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'Content Manager' => 'Content Manager',
-      'Site Manager' => 'Site Manager',
     ),
     'module' => 'dashboard',
   );
@@ -98,8 +97,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'access devel information',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'devel',
   );
@@ -151,6 +148,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'user',
@@ -179,6 +177,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer bean types',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
   );
@@ -188,6 +187,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer beans',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -198,6 +198,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Site Manager' => 'Site Manager',
     ),
     'module' => 'block',
   );
@@ -245,6 +246,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer entity view modes',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Site Manager' => 'Site Manager',
     ),
     'module' => 'entity_view_mode',
   );
@@ -254,6 +256,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer entityqueue',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'entityqueue',
@@ -301,6 +304,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer group',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Site Manager' => 'Site Manager',
     ),
     'module' => 'og',
   );
@@ -461,7 +465,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'user',
@@ -536,6 +539,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['create any entity_reference_blocks bean'] = array(
     'name' => 'create any entity_reference_blocks bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -545,6 +549,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['create any field_collection_block_resources bean'] = array(
     'name' => 'create any field_collection_block_resources bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -554,6 +559,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['create any html_block bean'] = array(
     'name' => 'create any html_block bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -563,6 +569,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['create any views_block bean'] = array(
     'name' => 'create any views_block bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -680,6 +687,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['delete any entity_reference_blocks bean'] = array(
     'name' => 'delete any entity_reference_blocks bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -698,6 +706,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['delete any field_collection_block_resources bean'] = array(
     'name' => 'delete any field_collection_block_resources bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -716,6 +725,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['delete any html_block bean'] = array(
     'name' => 'delete any html_block bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -763,6 +773,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['delete any views_block bean'] = array(
     'name' => 'delete any views_block bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -869,7 +880,11 @@ function global__user_roles_user_default_permissions() {
   // Exported permission: 'delete terms in implementation_status'.
   $permissions['delete terms in implementation_status'] = array(
     'name' => 'delete terms in implementation_status',
-    'roles' => array(),
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
+      'Site Manager' => 'Site Manager',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -920,6 +935,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['edit any entity_reference_blocks bean'] = array(
     'name' => 'edit any entity_reference_blocks bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -938,6 +954,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['edit any field_collection_block_resources bean'] = array(
     'name' => 'edit any field_collection_block_resources bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -956,6 +973,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['edit any html_block bean'] = array(
     'name' => 'edit any html_block bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -1014,6 +1032,7 @@ function global__user_roles_user_default_permissions() {
   $permissions['edit any views_block bean'] = array(
     'name' => 'edit any views_block bean',
     'roles' => array(
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -1024,7 +1043,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'edit bean view mode',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
   );
@@ -1141,7 +1159,11 @@ function global__user_roles_user_default_permissions() {
   // Exported permission: 'edit terms in implementation_status'.
   $permissions['edit terms in implementation_status'] = array(
     'name' => 'edit terms in implementation_status',
-    'roles' => array(),
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
+      'Site Manager' => 'Site Manager',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1183,8 +1205,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'execute php code',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'devel',
   );
@@ -1230,6 +1250,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'manipulate all entityqueues',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'entityqueue',
@@ -1240,6 +1261,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'manipulate entityqueues',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'entityqueue',
@@ -1329,8 +1351,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'switch users',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'devel',
   );
@@ -1367,8 +1387,6 @@ function global__user_roles_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       'Administrator' => 'Administrator',
-      'Regional Steering Group Member' => 'Regional Steering Group Member',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
   );
@@ -1399,6 +1417,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'filter',
@@ -1409,6 +1428,8 @@ function global__user_roles_user_default_permissions() {
     'name' => 'use text format raw_html_no_filters_',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
+      'Site Manager' => 'Site Manager',
     ),
     'module' => 'filter',
   );
@@ -1448,6 +1469,8 @@ function global__user_roles_user_default_permissions() {
     'name' => 'view any main profile',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'profile2',
   );
@@ -1467,6 +1490,7 @@ function global__user_roles_user_default_permissions() {
     'name' => 'view bean page',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Content Manager' => 'Content Manager',
       'Site Manager' => 'Site Manager',
     ),
     'module' => 'bean',
@@ -1521,6 +1545,7 @@ function global__user_roles_user_default_permissions() {
       'Content Manager' => 'Content Manager',
       'Regional Steering Group Member' => 'Regional Steering Group Member',
       'Site Manager' => 'Site Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'system',
   );

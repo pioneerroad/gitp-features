@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function content_type__event_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -21,7 +21,7 @@ function content_type__event_field_group_info() {
   $field_group->parent_name = 'group_metadata';
   $field_group->data = array(
     'label' => 'Group Access',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'og_group_ref',
       1 => 'group_content_access',
@@ -36,7 +36,7 @@ function content_type__event_field_group_info() {
       ),
     ),
   );
-  $export['group_access|node|event|form'] = $field_group;
+  $field_groups['group_access|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -54,7 +54,10 @@ function content_type__event_field_group_info() {
       0 => 'body',
       1 => 'field_event_date',
       2 => 'field_event_mode',
-      3 => 'field_contact_details',
+      3 => 'field_tags',
+      4 => 'field_contact_details',
+      5 => 'field_event_website',
+      6 => 'field_event_venue',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -71,7 +74,7 @@ function content_type__event_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_details|node|event|full'] = $field_group;
+  $field_groups['group_details|node|event|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -88,20 +91,22 @@ function content_type__event_field_group_info() {
     'children' => array(
       0 => 'field_event_date',
       1 => 'field_event_mode',
-      2 => 'field_event_location',
-      3 => 'field_contact_details',
+      2 => 'field_contact_details',
+      3 => 'field_event_website',
+      4 => 'field_event_venue',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Event Details',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-event-details field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-event-details field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
-  $export['group_event_details|node|event|form'] = $field_group;
+  $field_groups['group_event_details|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -114,7 +119,7 @@ function content_type__event_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Metadata',
-    'weight' => '8',
+    'weight' => '4',
     'children' => array(
       0 => 'group_access',
       1 => 'group_event_details',
@@ -128,7 +133,7 @@ function content_type__event_field_group_info() {
       ),
     ),
   );
-  $export['group_metadata|node|event|form'] = $field_group;
+  $field_groups['group_metadata|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -141,7 +146,7 @@ function content_type__event_field_group_info() {
   $field_group->parent_name = 'group_metadata';
   $field_group->data = array(
     'label' => 'Relationships',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_tags',
     ),
@@ -155,7 +160,14 @@ function content_type__event_field_group_info() {
       ),
     ),
   );
-  $export['group_relationships|node|event|form'] = $field_group;
+  $field_groups['group_relationships|node|event|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Event Details');
+  t('Group Access');
+  t('Metadata');
+  t('Relationships');
+
+  return $field_groups;
 }

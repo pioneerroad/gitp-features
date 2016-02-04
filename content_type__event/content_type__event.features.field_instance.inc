@@ -121,7 +121,7 @@ function content_type__event_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -142,7 +142,7 @@ function content_type__event_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -284,7 +284,7 @@ Access to these documents can be controlled (restricted to members of the Region
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -404,7 +404,7 @@ Access to these documents can be controlled (restricted to members of the Region
         ),
       ),
       'type' => 'leaflet_widget_widget',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -463,6 +463,141 @@ Access to these documents can be controlled (restricted to members of the Region
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_venue'.
+  $field_instances['node-event-field_event_venue'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'carousel_slide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'content_summary_box' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_venue',
+    'label' => 'Event Venue',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_event_website'.
+  $field_instances['node-event-field_event_website'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If this event has a web page, you may reference it here.',
+    'display' => array(
+      'carousel_slide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'content_summary_box' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_website',
+    'label' => 'Event Website',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_tags'.
   $field_instances['node-event-field_tags'] = array(
     'bundle' => 'event',
@@ -495,7 +630,7 @@ Access to these documents can be controlled (restricted to members of the Region
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -681,8 +816,11 @@ Access to these documents can be controlled (restricted to members of the Region
   t('Date of Event');
   t('Event Description');
   t('Event Location');
+  t('Event Venue');
+  t('Event Website');
   t('Group content visibility');
   t('Groups audience');
+  t('If this event has a web page, you may reference it here.');
   t('Mode of Participation');
   t('Please enter a date for this event. If it\'s a multi-day event you may (optionally) add an end date too.');
   t('Please indicate the mode of participation in this event.');

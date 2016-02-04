@@ -10,58 +10,6 @@
 function taxonomy_institutional_partner_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-partner-field_about_organisation'.
-  $field_instances['taxonomy_term-partner-field_about_organisation'] = array(
-    'bundle' => 'partner',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_about_organisation',
-    'label' => 'About this Organisation',
-    'required' => 0,
-    'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-partner-field_country'.
   $field_instances['taxonomy_term-partner-field_country'] = array(
     'bundle' => 'partner',
@@ -80,15 +28,24 @@ function taxonomy_institutional_partner_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'logos' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -104,7 +61,7 @@ function taxonomy_institutional_partner_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -132,16 +89,22 @@ function taxonomy_institutional_partner_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'logos' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_official_partner',
-    'label' => 'Is this organisation an official CRVS partner?',
+    'label' => 'Official Partner?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -153,7 +116,7 @@ function taxonomy_institutional_partner_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => 2,
     ),
   );
 
@@ -173,6 +136,13 @@ function taxonomy_institutional_partner_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'logos' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
@@ -181,7 +151,7 @@ function taxonomy_institutional_partner_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -197,7 +167,7 @@ function taxonomy_institutional_partner_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -222,6 +192,16 @@ function taxonomy_institutional_partner_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'logos' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
           'image_style' => 'medium',
         ),
         'type' => 'image',
@@ -235,17 +215,16 @@ function taxonomy_institutional_partner_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_partner_logo',
     'label' => 'Partner Logo',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'entity_translation_sync' => FALSE,
       'file_directory' => 'images/partner/logos',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -266,8 +245,8 @@ function taxonomy_institutional_partner_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-partner-field_partner_website'.
-  $field_instances['taxonomy_term-partner-field_partner_website'] = array(
+  // Exported field_instance: 'taxonomy_term-partner-field_website'.
+  $field_instances['taxonomy_term-partner-field_website'] = array(
     'bundle' => 'partner',
     'default_value' => NULL,
     'deleted' => 0,
@@ -278,14 +257,20 @@ function taxonomy_institutional_partner_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_url',
-        'weight' => 2,
+        'type' => 'link_default',
+        'weight' => 4,
+      ),
+      'logos' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -295,7 +280,7 @@ function taxonomy_institutional_partner_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_partner_website',
+    'field_name' => 'field_website',
     'label' => 'Website',
     'required' => 0,
     'settings' => array(
@@ -319,7 +304,7 @@ function taxonomy_institutional_partner_field_default_field_instances() {
       'title_value' => '',
       'url' => 0,
       'user_register_form' => FALSE,
-      'validate_url' => 1,
+      'validate_url' => 0,
     ),
     'widget' => array(
       'active' => 0,
@@ -332,10 +317,9 @@ function taxonomy_institutional_partner_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About this Organisation');
   t('Countries with activities');
   t('Indicate whether the organisation is a member of the official roster of partner organisations.');
-  t('Is this organisation an official CRVS partner?');
+  t('Official Partner?');
   t('Partner Logo');
   t('Please select the countries where this partner has active programmes or activities.');
   t('Please select the type of organisation that best describes this partner.');

@@ -123,7 +123,7 @@ function text_formats_ckeditor_profile_defaults() {
         'css_path' => '',
         'css_style' => 'theme',
         'styles_path' => '',
-        'filebrowser' => 'ckfinder',
+        'filebrowser' => 'none',
         'filebrowser_image' => 'ckfinder',
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/uploads/',

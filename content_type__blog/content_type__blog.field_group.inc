@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function content_type__blog_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -33,7 +33,7 @@ function content_type__blog_field_group_info() {
       ),
     ),
   );
-  $export['group_metadata|node|blog|form'] = $field_group;
+  $field_groups['group_metadata|node|blog|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -62,7 +62,7 @@ function content_type__blog_field_group_info() {
       ),
     ),
   );
-  $export['group_relationships|node|blog|form'] = $field_group;
+  $field_groups['group_relationships|node|blog|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -96,7 +96,13 @@ function content_type__blog_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_relationships|node|blog|full'] = $field_group;
+  $field_groups['group_relationships|node|blog|full'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Metadata');
+  t('Related Content');
+  t('Relationships');
+
+  return $field_groups;
 }

@@ -10,12 +10,12 @@
 function taxonomy_institutional_partner_taxonomy_default_vocabularies() {
   return array(
     'partner' => array(
-      'name' => 'Institutional Partner',
+      'name' => 'Organisations',
       'machine_name' => 'partner',
-      'description' => 'CRVS Decade Institutional Partner',
+      'description' => 'Organisations',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -7,
+      'weight' => -8,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
