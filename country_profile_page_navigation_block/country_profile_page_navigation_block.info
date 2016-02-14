@@ -1,0 +1,13 @@
+name = Country Profile Page Navigation Block
+description = Places a block of countries (organised by sub-region) on the country profile home page
+core = 7.x
+package = Page Block
+version = 7.x-1.0
+dependencies[] = context
+dependencies[] = views
+features[context][] = country_page_navigation_block
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = country_page_list
+features_exclude[dependencies][ctools] = ctools
