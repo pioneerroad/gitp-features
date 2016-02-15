@@ -167,9 +167,10 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
       ),
       'full_profile' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'thumbnail_profile' => array(
         'label' => 'above',
@@ -276,9 +277,10 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
       ),
       'full_profile' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 5,
       ),
       'thumbnail_profile' => array(
         'label' => 'above',
@@ -330,9 +332,12 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
       ),
       'full_profile' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
       ),
       'thumbnail_profile' => array(
         'label' => 'above',
@@ -381,9 +386,12 @@ Since it will be displayed throughout the site, please write in the <i>\'third p
       ),
       'full_profile' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
       ),
       'thumbnail_profile' => array(
         'label' => 'hidden',

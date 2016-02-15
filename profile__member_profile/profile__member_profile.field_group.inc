@@ -60,6 +60,7 @@ function profile__member_profile_field_group_info() {
       0 => 'field_country',
       1 => 'field_member_working_country',
       2 => 'field_partner_organisation',
+      3 => 'field_member_job_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
