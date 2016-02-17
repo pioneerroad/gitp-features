@@ -672,6 +672,49 @@ function taxonomy_country_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-country-field_country_sub_region'.
+  $field_instances['taxonomy_term-country-field_country_sub_region'] = array(
+    'bundle' => 'country',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 33,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_country_sub_region',
+    'label' => 'Sub-Region',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance:
   // 'taxonomy_term-country-field_country_teenage_fertility'.
   $field_instances['taxonomy_term-country-field_country_teenage_fertility'] = array(
@@ -938,7 +981,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_1a',
     'label' => 'Target 1A',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -985,7 +1028,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_1b',
     'label' => 'Target 1B',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1032,7 +1075,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_1c',
     'label' => 'Target 1C',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1079,7 +1122,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_1d',
     'label' => 'Target 1D',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1126,7 +1169,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_1e',
     'label' => 'Target 1E',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1173,7 +1216,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_2a',
     'label' => 'Target 2A',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1220,7 +1263,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_2b',
     'label' => 'Target 2B',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1267,7 +1310,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3a',
     'label' => 'Target 3A',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1314,7 +1357,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3b',
     'label' => 'Target 3B',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1361,7 +1404,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3c',
     'label' => 'Target 3C',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1408,7 +1451,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3d',
     'label' => 'Target 3D',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1455,7 +1498,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3e',
     'label' => 'Target 3E',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1502,7 +1545,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3f',
     'label' => 'Target 3F',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1549,7 +1592,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3g',
     'label' => 'Target 3G',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1596,7 +1639,7 @@ function taxonomy_country_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_target_3h',
     'label' => 'Target 3H',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1629,6 +1672,7 @@ function taxonomy_country_field_default_field_instances() {
   t('RSG Member');
   t('Report');
   t('Strategy');
+  t('Sub-Region');
   t('Target 1A');
   t('Target 1B');
   t('Target 1C');

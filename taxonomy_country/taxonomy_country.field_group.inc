@@ -21,7 +21,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = 'group_country_information';
   $field_group->data = array(
     'label' => 'Contacts',
-    'weight' => '16',
+    'weight' => '52',
     'children' => array(
       0 => 'field_country_crvs_focal_point',
       1 => 'field_country_rsg_member',
@@ -82,7 +82,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Country Information',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'group_country_statistics',
       1 => 'group_implementation_status',
@@ -109,7 +109,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = 'group_country_information';
   $field_group->data = array(
     'label' => 'Country Statistics',
-    'weight' => '17',
+    'weight' => '53',
     'children' => array(
       0 => 'field_country_pop_growth_rate',
       1 => 'field_country_crude_birth_rate',
@@ -373,7 +373,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = 'group_country_information';
   $field_group->data = array(
     'label' => 'Implementation Status',
-    'weight' => '18',
+    'weight' => '54',
     'children' => array(
       0 => 'field_country_impl_coordination',
       1 => 'field_country_impl_assessment',
@@ -481,7 +481,7 @@ function taxonomy_country_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'National Targets',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'group_goal_1',
       1 => 'group_goal_2',

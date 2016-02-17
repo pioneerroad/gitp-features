@@ -444,6 +444,36 @@ function taxonomy_country_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_country_sub_region'.
+  $field_bases['field_country_sub_region'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_country_sub_region',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'ENEA' => 'East and North-East Asia',
+        'SEA' => 'South-East Asia',
+        'SSWA' => 'South and South-West Asia',
+        'NCA' => 'North and Central Asia',
+        'PAC' => 'Pacific',
+        'Other' => 'Other',
+      ),
+      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_country_teenage_fertility'.
   $field_bases['field_country_teenage_fertility'] = array(
     'active' => 1,
